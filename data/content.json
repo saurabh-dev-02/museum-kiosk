@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "idleTimeoutSeconds": 60,
+    "warningSeconds": 15,
+    "designWidth": 1920,
+    "designHeight": 1080
+  },
+  "timeout": {
+    "message": "Your session will end in {seconds} seconds",
+    "question": "Do you want to continue?",
+    "confirmLabel": "Yes",
+    "dismissLabel": "No"
+  },
+  "exhibits": [
+    {
+      "id": "ocean",
+      "title": "The Deep Ocean",
+      "summary": "Life below 1,000 metres.",
+      "body": "Most of the ocean gets no sunlight. Animals here make their own light, live under huge pressure, and can go months without food."
+    },
+    {
+      "id": "volcano",
+      "title": "Volcanoes",
+      "summary": "How the Earth lets off steam.",
+      "body": "A volcano forms where hot rock from deep inside the Earth breaks through the crust. Some erupt every day. Others sleep for thousands of years."
+    },
+    {
+      "id": "space",
+      "title": "The Solar System",
+      "summary": "Eight planets and one star.",
+      "body": "The Sun holds 99.8% of the mass in our solar system. Jupiter is so big that all the other planets could fit inside it."
+    },
+    {
+      "id": "dinosaurs",
+      "title": "Dinosaurs",
+      "summary": "Giants of the past.",
+      "body": "Dinosaurs lived for about 165 million years. Birds are their living relatives, so in a way dinosaurs never fully went away."
+    }
+  ]
+}
