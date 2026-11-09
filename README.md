@@ -25,3 +25,9 @@ npm run lint
 ## Content
 
 All text and settings (idle timeout, warning seconds, design size) live in [`data/content.json`](data/content.json).
+
+## How it works
+
+- `components/ScaledStage.tsx`: renders the fixed 1920x1080 layout and scales it uniformly to fit the window, with black bars on the edges.
+- `components/IdleTimeoutProvider.tsx`: any touch, click or key press resets the idle timer. The warning modal shows `warningSeconds` before the timeout. On `/` the timer only starts after the first touch.
+- `components/TouchButton.tsx`: used for every button and link. It shows a pressed state and logs `{ eventName, timestamp }` to the console.

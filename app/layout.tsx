@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import IdleTimeoutProvider from "@/components/IdleTimeoutProvider";
+import ScaledStage from "@/components/ScaledStage";
 import { settings, timeout } from "@/data/content";
 import "./globals.css";
 
@@ -26,10 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body>
-        <div
-          className="relative overflow-hidden bg-background"
-          style={{ width: settings.designWidth, height: settings.designHeight }}
-        >
+        <ScaledStage width={settings.designWidth} height={settings.designHeight}>
           <IdleTimeoutProvider
             idleTimeoutSeconds={settings.idleTimeoutSeconds}
             warningSeconds={settings.warningSeconds}
@@ -37,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           >
             {children}
           </IdleTimeoutProvider>
-        </div>
+        </ScaledStage>
       </body>
     </html>
   );

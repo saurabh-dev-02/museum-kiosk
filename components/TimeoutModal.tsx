@@ -50,7 +50,7 @@ export default function TimeoutModal({ seconds, text, onConfirm, onDismiss }: Ti
           <TouchButton
             eventName="timeout_dismiss"
             onPress={onDismiss}
-            className="h-[104px] flex-1 rounded-full border-2 border-foreground/70 text-[36px] font-semibold"
+            className="h-[104px] flex-1 rounded-full border-2 border-foreground/70 text-[36px] font-semibold data-pressed:bg-foreground/10"
           >
             {text.dismissLabel}
           </TouchButton>

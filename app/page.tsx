@@ -23,7 +23,7 @@ export default function Home() {
             <TouchButton
               href={`/exhibits/${exhibit.id}`}
               eventName={`exhibit_card_${exhibit.id}`}
-              className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-border bg-surface text-left"
+              className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-border bg-surface text-left data-pressed:border-accent data-pressed:brightness-100"
             >
               <div
                 aria-hidden
