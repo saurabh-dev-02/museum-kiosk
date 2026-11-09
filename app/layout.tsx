@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { settings } from "@/data/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,7 +24,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        <div
+          className="relative overflow-hidden bg-background"
+          style={{ width: settings.designWidth, height: settings.designHeight }}
+        >
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

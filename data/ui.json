@@ -1,0 +1,13 @@
+{
+  "home": {
+    "eyebrow": "Explore",
+    "title": "Our Exhibits",
+    "hint": "Tap an exhibit to learn more",
+    "museumName": "City Science Museum",
+    "footerHint": "Touch the screen to begin"
+  },
+  "exhibitPage": {
+    "backLabel": "Back",
+    "notFoundTitle": "Exhibit not found"
+  }
+}
