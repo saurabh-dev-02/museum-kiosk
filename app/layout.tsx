@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { settings } from "@/data/content";
+import IdleTimeoutProvider from "@/components/IdleTimeoutProvider";
+import { settings, timeout } from "@/data/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,7 +30,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           className="relative overflow-hidden bg-background"
           style={{ width: settings.designWidth, height: settings.designHeight }}
         >
-          {children}
+          <IdleTimeoutProvider
+            idleTimeoutSeconds={settings.idleTimeoutSeconds}
+            warningSeconds={settings.warningSeconds}
+            text={timeout}
+          >
+            {children}
+          </IdleTimeoutProvider>
         </div>
       </body>
     </html>

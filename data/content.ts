@@ -1,16 +1,15 @@
 import content from "./content.json";
-import ui from "./ui.json";
 
 export type Settings = typeof content.settings;
 export type TimeoutText = typeof content.timeout;
-export type HomeText = typeof ui.home;
-export type ExhibitPageText = typeof ui.exhibitPage;
+export type HomeText = typeof content.home;
+export type ExhibitPageText = typeof content.exhibitPage;
 export type Exhibit = (typeof content.exhibits)[number];
 
 export const settings: Settings = content.settings;
 export const timeout: TimeoutText = content.timeout;
-export const home: HomeText = ui.home;
-export const exhibitPage: ExhibitPageText = ui.exhibitPage;
+export const home: HomeText = content.home;
+export const exhibitPage: ExhibitPageText = content.exhibitPage;
 export const exhibits: Exhibit[] = content.exhibits;
 
 export function getExhibit(id: string): Exhibit | undefined {
